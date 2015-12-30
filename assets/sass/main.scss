@@ -90,26 +90,83 @@ picture {
 }
 
 header {
-  background-color: $light-gray;
-  .logo {
-    display: block;
+  position: relative;
 
-    width: $width / 10;
+  height: 348px;
+
+  background-color: #f9e8a1;
+  background-image: url(../img/bg/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  &:after {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 74px;
+
+    background-color: rgba(249, 232, 214, .52);
+
+    @extend .dblock;
+  }
+  .inner {
+    height: 100%;
+  }
+  .logo {
+    top: 118px;
+    left: 88px;
+
+    display: block;
     img {
       max-width: 100%;
     }
   }
 }
 nav {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
   ul {
     @extend .justify-child;
     @extend .clearfix;
     li {
       display: inline-block;
+
+      text-align: center;
+      a {
+        display: block;
+
+        padding: 25px 8px;
+
+        text-decoration: none;
+
+        color: #484643;
+        border-right: 4px solid #fff;
+      }
+      &:hover {
+        a {
+          text-decoration: none;
+
+          color: #484643;
+          background-color: #f9e8d7;
+        }
+      }
+      &:last-child {
+        a {
+          border-right: 0;
+        }
+      }
     }
   }
   .headnav {
-    width: $width / 5;
+    width: 100%;
+
+    @extend .justify-child;;
   }
 }
 
