@@ -149,6 +149,7 @@ nav {
         color: #484643;
         border-right: 4px solid #fff;
       }
+      &.current_page_item,
       &:hover {
         a {
           text-decoration: none;

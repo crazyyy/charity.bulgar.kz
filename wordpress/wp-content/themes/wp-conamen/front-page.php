@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /* Template Name: Home Page Template */ get_header(); ?>
   <article>
 
     <h1 class="ctitle"><?php _e( 'Latest Posts', 'wpeasy' ); ?></h1>
