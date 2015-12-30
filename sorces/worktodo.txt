@@ -1,0 +1,15 @@
+vмакеты статических страниц (также могут быть использованы под одиночные записи):
+1.Charita_1024_in_O NAS
+2.Charita_1024_in_razdel_in_razdel_POTREBUJU POMOC
+3.Charita_1024_in_razdel_KONTAKTY
+
+макеты рубрик:
+1.Charita_1024_in_razdel_AKTUALITY
+2.Charita_1024_in_razdel_komu_nuzna_pomoc
+3.Charita_1024_in_razdel_PRIBEHY DETI_jsme pomohli
+4. Charita_1024_razdel_JAK MUZETE POMOCI
+
+макеты записей рубрик:
+1.Charita_1024_razdel_JAK MUZETE POMOCI
+2.Charita_1024_in_razdel_komu_nuzna_pomoc_stastya_cist dalsi
+3.Charita_1024_in_razdel_PRIBEHY DETI_jsme pomohli_STATYA
