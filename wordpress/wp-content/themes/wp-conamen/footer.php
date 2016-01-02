@@ -1,4 +1,3 @@
-    </div><!-- /.inner -->
   </section><!-- /section -->
 
 </div><!-- /wrapper -->
@@ -53,6 +52,25 @@ $(document).ready(function() {
     paginationSpeed : 1000,
     goToFirstSpeed : 2000,
     autoHeight : true,
+    transitionStyle:"fade"
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  $(".owl-carousel-parners").owlCarousel({
+    navigation: true,
+    navigationText: ["<",">"],
+    slideSpeed: 300,
+    pagination: false,
+    paginationSpeed : 400,
+    singleItem : true,
+    autoPlay : 3000,
+    stopOnHover : true,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+
     transitionStyle:"fade"
   });
 });
