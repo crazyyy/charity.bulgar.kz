@@ -157,11 +157,15 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  ul {
+  .headnav {
+    width: 100%;
+
     @extend .justify-child;
     @extend .clearfix;
     li {
       display: inline-block;
+
+      width: 12.5%;
 
       text-align: center;
       a {
@@ -190,11 +194,6 @@ nav {
       }
     }
   }
-  .headnav {
-    width: 100%;
-
-    @extend .justify-child;;
-  }
 }
 
 section {
@@ -222,8 +221,8 @@ article {
     position: absolute;
     z-index: -1;
     top: -5px;
-    right: -5px;
-    bottom: -5px;
+    right: -26px;
+    bottom: -8px;
     left: -5px;
 
     background-color: #fff;
@@ -234,10 +233,13 @@ article {
 .article-bordered {
   font-size: 12px;
 
-  margin: 60px 100px 65px;
+  margin: 56px 100px 65px;
   padding: 30px 25px 20px;
 
   border: 3px solid $blue;
+  p {
+    line-height: 1;
+  }
 }
 .middle-row {
   .middle-row-title {
