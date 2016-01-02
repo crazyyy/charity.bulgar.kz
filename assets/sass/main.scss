@@ -294,6 +294,8 @@ article {
 
   margin-bottom: 15px;
 
+  text-transform: uppercase;
+
   color: $red;
 }
 .title-subtitle {
@@ -302,6 +304,8 @@ article {
   font-weight: bold;
 
   margin-bottom: 25px;
+
+  text-transform: uppercase;
 
   color: #565555;
 
@@ -382,7 +386,6 @@ article {
 }
 .owl-carousel-single {
   display: block;
-  display: block;
 
   width: 100%;
   height: auto;
@@ -390,7 +393,182 @@ article {
   border: 3px solid $blue;
   border-radius: 3px;
 }
+.article-carousel {
+  position: relative;
 
+  padding: 20px 0;
+  .article-carousel-title {
+    font-size: 19px;
+
+    position: absolute;
+    top: -30px;
+    right: 115px;
+
+    display: inline-block;
+
+    width: 190px;
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: $red;
+    border-radius: 5px 5px 0 0;
+    background-color: #fff;
+  }
+  .owl-carousel-fourth {
+    width: 840px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .item {
+    font-size: 18px;
+
+    width: 200px;
+    height: 225px;
+
+    text-align: center;
+    img {
+      width: 100%;
+      height: 170px;
+      margin-bottom: 10px;
+
+      border: 5px solid $red;
+      border-radius: 5px;
+    }
+    .title-name {
+      color: #565555;
+    }
+    .contib {
+      color: $red;
+    }
+  }
+  .owl-theme {
+    .owl-controls {
+      top: 40%;
+      .owl-buttons {
+        div {
+          font-size: 20px;
+          font-weight: 700;
+
+          position: absolute;
+
+          display: inline-block;
+          zoom: 1;
+
+          width: 38px;
+          height: 38px;
+          margin: 0;
+
+          text-align: center;
+
+          opacity: 1;
+          color: #565555;
+          border-radius: 3px;
+          background-color: transparent;
+        }
+        .owl-prev {
+          left: -40px;
+        }
+        .owl-next {
+          right: -40px;
+        }
+      }
+    }
+  }
+}
+.article-bordered-centered {
+  .title-bordered {
+    left: 50%;
+
+    width: 230px;
+    margin-left: -115px;
+
+    text-align: center;
+  }
+  .title-subtitle-centered {
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+}
+.howtohelp {
+  padding: 0 35px;
+  li {
+    position: relative;
+
+    padding: 25px 25px 25px 115px;
+    h5 {
+      font-family: 'Myriad Pro Cond';
+      font-size: 24px;
+      font-weight: bold;
+
+      margin-bottom: 20px;
+
+      color: $blue;
+    }
+    p {
+      font-size: 15px;
+
+      margin-bottom: 20px;
+
+      color: #2c2a2a;
+    }
+    a {
+      font-size: 16px;
+
+      position: absolute;
+      right: 150px;
+      bottom: 20px;
+
+      padding: 0;
+
+      color: $red;
+      border-bottom: 1px dotted $red;
+      &:hover {
+        text-decoration: none;
+        border-bottom: 1px dotted transparent;
+      }
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 75px;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @extend .dblock;
+    }
+    &:nth-child(1) {
+      &:before {
+        background-image: url(../img/bg/howtohelp-1.png);
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        background-image: url(../img/bg/howtohelp-2.png);
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        background-image: url(../img/bg/howtohelp-3.png);
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        background-image: url(../img/bg/howtohelp-4.png);
+      }
+    }
+    &:nth-child(5) {
+      &:before {
+        background-image: url(../img/bg/howtohelp-5.png);
+      }
+    }
+  }
+}
 
 footer {
   height: $footer;

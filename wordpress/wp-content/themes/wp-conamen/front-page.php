@@ -9,47 +9,44 @@
   </article><!-- /.middle-row -->
 
   <article class="article-slide">
-    <div class="article-slide-left">
-      <h2 class="title-red">HLÁVNÍ SLOVA</h2>
-      <h3 class="title-subtitle">POMOC PRO DANIELA VOJTEKA <span>12 076,-</span></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptas soluta itaque consequuntur laudantium fugiat libero, ab consectetur sed fuga impedit enim sequi assumenda nostrum officia unde placeat, voluptates, porro?</p>
-      <a href="" class="btn btn-blue">ČIST DALŠÍ</a>
-      <a href="" class="btn btn-red">PŘÍBĚH DÍTĚTE</a>
-    </div><!-- /.article-slide-left -->
-    <div class="article-slide-right">
 
-      <div class="owl-carousel-single">
-        <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="The Last of us"></div>
-        <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg" alt="GTA V"></div>
-        <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="Mirror Edge"></div>
-      </div>
-
-    </div><!-- /.article-slide-right -->
-
-<script>
-$(document).ready(function() {
-  $(".owl-carousel-single").owlCarousel({
-    navigation: true,
-    navigationText: ["<",">"],
-    slideSpeed: 300,
-    pagination: false,
-    paginationSpeed : 400,
-    singleItem : true,
-    autoPlay : 3000,
-    stopOnHover : true,
-    paginationSpeed : 1000,
-    goToFirstSpeed : 2000,
-    autoHeight : true,
-    transitionStyle:"fade"
-  });
-});
-</script>
-
+    <?php query_posts( array( 'post_type' => child, 'showposts' => 1 ) ); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
+        <div class="article-slide-left">
+          <h2 class="title-red"><?php the_title(); ?></h2>
+          <h3 class="title-subtitle">POMOC PRO <?php the_field('name'); ?> <span><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span></h3>
+          <?php the_field('description'); ?>
+          <a href="" class="btn btn-blue">ČIST DALŠÍ</a>
+          <a href="" class="btn btn-red">PŘÍBĚH DÍTĚTE</a>
+        </div><!-- /.article-slide-left -->
+        <div class="article-slide-right">
+          <div class="owl-carousel-single">
+            <?php $images = get_field('gallery'); if( $images ): ?>
+              <?php foreach( $images as $image ): ?>
+                <div class="item"><img src="<?php echo $image['url']; ?>" alt="<?php the_title(); ?>"></div>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </div>
+        </div><!-- /.article-slide-right -->
+      <?php endwhile; ?>
+    <?php wp_reset_query(); ?>
 
   </article><!-- /.article-slide -->
 
   <article class="article-carousel article-carousel-right">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nemo illum, vero. Quae assumenda eum accusamus quod dolorem ratione tenetur doloremque adipisci, facere natus reprehenderit. Nihil eius velit laboriosam quisquam?
+    <h5 class="article-carousel-title">POMOC, PROSÍM!</h5>
+    <div class="owl-carousel owl-carousel-fourth">
+      <?php query_posts( array( 'post_type' => child, 'showposts' => 25 ) ); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+          <div class="item">
+            <?php $images = get_field('gallery'); $image_1 = $images[0]; ?>
+            <img src="<?php echo $image_1[url]; ?>" alt="<?php the_title(); ?>">
+            <h5 class="title-name"><?php the_field('name'); ?></h5>
+            <h6 class="contib"><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</h6>
+          </div><!-- item -->
+        <?php endwhile; ?>
+      <?php wp_reset_query(); ?>
+    </div><!-- owl-carousel-fourth -->
   </article><!-- /.article-carousel article-carousel-right -->
 
   <article class="article-bordered article-bordered-centered">
