@@ -1,6 +1,6 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
   <article class="article-bordered article-bordered-left">
-    <h1 class="title-bordered"><?php _e( 'Latest Posts', 'wpeasy' ); ?></h1>
+    <h1 class="title-bordered"><?php the_title(); ?></h1>
     <?php the_content(); ?>
   </article><!-- article-bordered -->
 
