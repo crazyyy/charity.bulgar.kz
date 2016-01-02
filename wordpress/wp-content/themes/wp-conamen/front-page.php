@@ -41,8 +41,8 @@
           <div class="item">
             <?php $images = get_field('gallery'); $image_1 = $images[0]; ?>
             <img src="<?php echo $image_1[url]; ?>" alt="<?php the_title(); ?>">
-            <h5 class="title-name"><?php the_field('name'); ?></h5>
-            <h6 class="contib"><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</h6>
+            <span class="title-name"><?php the_field('name'); ?></span>
+            <span class="contib"><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span>
           </div><!-- item -->
         <?php endwhile; ?>
       <?php wp_reset_query(); ?>
@@ -87,7 +87,20 @@
   </article><!-- /.article-bordered article-bordered-centered -->
 
   <article class="article-carousel article-carousel-left article-carousel-gray">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nemo illum, vero. Quae assumenda eum accusamus quod dolorem ratione tenetur doloremque adipisci, facere natus reprehenderit. Nihil eius velit laboriosam quisquam?
+    <h5 class="article-carousel-title">KOMU JSME POMOHLI?</h5>
+    <div class="owl-carousel owl-carousel-fourth owl-carousel-blue">
+      <?php query_posts( array( 'post_type' => child, 'showposts' => 25 ) ); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+          <div class="item">
+            <span class="title-name"><?php the_field('name'); ?></span>
+            <?php $images = get_field('gallery'); $image_1 = $images[0]; ?>
+            <img src="<?php echo $image_1[url]; ?>" alt="<?php the_title(); ?>">
+            <span class="darovana">Darovaná částka</span>
+            <span class="contib"><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span>
+          </div><!-- item -->
+        <?php endwhile; ?>
+      <?php wp_reset_query(); ?>
+    </div><!-- owl-carousel-fourth -->
   </article><!-- /.article-carousel article-carousel-left article-carousel-gray -->
 
   <article class="be-partners">

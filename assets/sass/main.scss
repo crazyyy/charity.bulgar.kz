@@ -430,7 +430,7 @@ article {
     img {
       width: 100%;
       height: 170px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
 
       border: 5px solid $red;
       border-radius: 5px;
@@ -440,6 +440,9 @@ article {
     }
     .contib {
       color: $red;
+    }
+    span {
+      display: block;
     }
   }
   .owl-theme {
@@ -502,9 +505,24 @@ article {
       font-size: 24px;
       font-weight: bold;
 
+      position: relative;
+
       margin-bottom: 20px;
 
       color: $blue;
+      &:before {
+        position: absolute;
+        top: -25px;
+        right: 0;
+        left: 0;
+
+        width: 90%;
+        height: 1px;
+
+        border-bottom: 1px dotted $blue;
+
+        @extend .dblock;
+      }
     }
     p {
       font-size: 15px;
@@ -526,6 +544,7 @@ article {
       border-bottom: 1px dotted $red;
       &:hover {
         text-decoration: none;
+
         border-bottom: 1px dotted transparent;
       }
     }
@@ -543,6 +562,11 @@ article {
       @extend .dblock;
     }
     &:nth-child(1) {
+      h5 {
+        &:before {
+          display: none;
+        }
+      }
       &:before {
         background-image: url(../img/bg/howtohelp-1.png);
       }
@@ -568,6 +592,43 @@ article {
       }
     }
   }
+}
+.article-carousel-left {
+  .article-carousel-title {
+    top: 0;
+    right: auto;
+    left: 115px;
+
+    border-radius: 0 0 5px 5px;
+  }
+  .item {
+    font-size: 19px;
+
+    height: 280px;
+
+    text-align: center;
+    img {
+      border-color: $blue;
+    }
+    .title-name,
+    .darovana {
+      margin-bottom: 10px;
+
+      color: #565555;
+    }
+  }
+}
+
+
+
+
+
+
+
+.article-carousel-gray {
+  padding-top: 60px;
+
+  background-color: #dcdcdc;
 }
 
 footer {
