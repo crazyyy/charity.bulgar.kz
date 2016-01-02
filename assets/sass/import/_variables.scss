@@ -1,7 +1,7 @@
 // Font Sizes
-$base-font-size: 16px;
+$base-font-size: 11px;
 $em-base: $base-font-size;
-$base-font-family: 'Open Sans', sans-serif;
+$base-font-family: 'Myriad Pro Cond';
 $heading-font-family: $base-font-family;
 
 // font weight
@@ -29,16 +29,16 @@ $base-z-index: 0;
 $orange: orange;
 $red: #e52621;
 $blue: #333399;
-$dark-gray: #333;
+$dark-gray: #2c2a2a;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $red;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $blue;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
@@ -46,7 +46,7 @@ $base-background-color: #fff;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, .06);
+$form-box-shadow: inset 0 1px 3px rgba($blue, .06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -.3);
 
 // Animations

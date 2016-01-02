@@ -5,7 +5,7 @@
   </article><!-- article-bordered -->
 
   <article class="middle-row">
-    <h6> Díky vam jsme od doposud pomohli dětem a rodinám<br>v celé ČR  v hodnotě  <br><span>625 620 Kč</span></h6>
+    <h6 class="middle-row-title"> Díky vam jsme od doposud pomohli dětem a rodinám<br>v celé ČR  v hodnotě  <br><span>625 620 Kč</span></h6>
   </article><!-- /.middle-row -->
 
   <article class="article-slide">
@@ -18,7 +18,33 @@
     </div><!-- /.article-slide-left -->
     <div class="article-slide-right">
 
+      <div class="owl-carousel-single">
+        <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="The Last of us"></div>
+        <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg" alt="GTA V"></div>
+        <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="Mirror Edge"></div>
+      </div>
+
     </div><!-- /.article-slide-right -->
+
+<script>
+$(document).ready(function() {
+  $(".owl-carousel-single").owlCarousel({
+    navigation: true,
+    navigationText: ["<",">"],
+    slideSpeed: 300,
+    pagination: false,
+    paginationSpeed : 400,
+    singleItem : true,
+    autoPlay : 3000,
+    stopOnHover : true,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    autoHeight : true,
+    transitionStyle:"fade"
+  });
+});
+</script>
+
 
   </article><!-- /.article-slide -->
 

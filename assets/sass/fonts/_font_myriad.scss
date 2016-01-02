@@ -1,46 +1,72 @@
-$os-font-path: '../fonts' !default;
+$font-path: '../fonts' !default;
 
 @font-face {
-  font-family: 'Open Sans';
-  font-weight: lighter;
-  font-style: normal;
-
-  src: url('#{$os-font-path}/OpenSans-Light-webfont.eot');
-  src: url('#{$os-font-path}/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-  url('#{$os-font-path}/OpenSans-Light-webfont.woff') format('woff'),
-  url('#{$os-font-path}/OpenSans-Light-webfont.ttf') format('truetype'),
-  url('#{$os-font-path}/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
-}
-@font-face {
-  font-family: 'Open Sans';
+  font-family: 'Myriad Pro';
   font-weight: normal;
   font-style: normal;
 
-  src: url('#{$os-font-path}/OpenSans-Regular-webfont.eot');
-  src: url('#{$os-font-path}/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('#{$os-font-path}/OpenSans-Regular-webfont.woff') format('woff'),
-  url('#{$os-font-path}/OpenSans-Regular-webfont.ttf') format('truetype'),
-  url('#{$os-font-path}/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  src: url('#{$font-path}/myriadproregular.eot');
+  src: url('#{$font-path}/myriadproregular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadproregular.woff') format('woff'),
+  url('#{$font-path}/myriadproregular.ttf') format('truetype'),
+  url('#{$font-path}/myriadproregular.otf') format('otf');
 }
+
 @font-face {
-  font-family: 'Open Sans';
-  font-weight: bold;
+  font-family: 'Myriad Pro';
+  font-weight: normal;
+  font-style: italic;
+
+  src: url('#{$font-path}/myriadproitalic.eot');
+  src: url('#{$font-path}/myriadproitalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadproitalic.woff') format('woff'),
+  url('#{$font-path}/myriadproitalic.ttf') format('truetype'),
+  url('#{$font-path}/myriadproitalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  font-weight: $f-sbold;
   font-style: normal;
 
-  src: url('#{$os-font-path}/OpenSans-Bold-webfont.eot');
-  src: url('#{$os-font-path}/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('#{$os-font-path}/OpenSans-Bold-webfont.woff') format('woff'),
-  url('#{$os-font-path}/OpenSans-Bold-webfont.ttf') format('truetype'),
-  url('#{$os-font-path}/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+  src: url('#{$font-path}/myriadprosemibold.eot');
+  src: url('#{$font-path}/myriadprosemibold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprosemibold.woff') format('woff'),
+  url('#{$font-path}/myriadprosemibold.ttf') format('truetype'),
+  url('#{$font-path}/myriadprosemibold.otf') format('otf');
 }
+
 @font-face {
-  font-family: 'Open Sans';
-  font-weight: 600;
+  font-family: 'Myriad Pro';
+  font-weight: $f-sbold;
+  font-style: italic;
+
+  src: url('#{$font-path}/myriadprosemibolditalic.eot');
+  src: url('#{$font-path}/myriadprosemibolditalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprosemibolditalic.woff') format('woff'),
+  url('#{$font-path}/myriadprosemibolditalic.ttf') format('truetype'),
+  url('#{$font-path}/myriadprosemibolditalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  font-weight: $f-bold;
   font-style: normal;
 
-  src: url('#{$os-font-path}/OpenSans-Semibold-webfont.eot');
-  src: url('#{$os-font-path}/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('#{$os-font-path}/OpenSans-Semibold-webfont.woff') format('woff'),
-  url('#{$os-font-path}/OpenSans-Semibold-webfont.ttf') format('truetype'),
-  url('#{$os-font-path}/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+  src: url('#{$font-path}/myriadprobold.eot');
+  src: url('#{$font-path}/myriadprobold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprobold.woff') format('woff'),
+  url('#{$font-path}/myriadprobold.ttf') format('truetype'),
+  url('#{$font-path}/myriadprobold.otf') format('otf');
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  font-weight: $f-bold;
+  font-style: italic;
+
+  src: url('#{$font-path}/myriadprobolditalic.eot');
+  src: url('#{$font-path}/myriadprobolditalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprobolditalic.woff') format('woff'),
+  url('#{$font-path}/myriadprobolditalic.ttf') format('truetype'),
+  url('#{$font-path}/myriadprobolditalic.otf') format('otf');
 }

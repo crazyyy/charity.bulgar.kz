@@ -1,74 +1,48 @@
-$rb-font-path: '../fonts' !default;
-
+$font-path: '../fonts' !default;
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  font-weight: 300;
+  font-family: 'Myriad Pro Cond';
+  font-weight: normal;
   font-style: normal;
 
-  src: url('#{$rb-font-path}/RobotoCondensed-Light.eot');
-  src: local('Roboto Condensed Light'),
-  local('RobotoCondensed-Light'),
-  url('#{$rb-font-path}/RobotoCondensed-Light.eot') format('embedded-opentype'),
-  url('#{$rb-font-path}/RobotoCondensed-Light.woff') format('woff');
+  src: url('#{$font-path}/myriadprocondregular.eot');
+  src: url('#{$font-path}/myriadprocondregular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprocondregular.woff') format('woff'),
+  url('#{$font-path}/myriadprocondregular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  font-weight: 400;
+  font-family: 'Myriad Pro Cond';
+  font-weight: normal;
+  font-style: italic;
+
+  src: url('#{$font-path}/myriadproconditalic.eot');
+  src: url('#{$font-path}/myriadproconditalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadproconditalic.woff') format('woff'),
+  url('#{$font-path}/myriadproconditalic.ttf') format('truetype'),
+  url('#{$font-path}/myriadproconditalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Cond';
+  font-weight: bold;
   font-style: normal;
 
-  src: url('#{$rb-font-path}/RobotoCondensed-Regular.eot');
-  src: local('Roboto Condensed Regular'),
-  local('RobotoCondensed-Regular'),
-  url('#{$rb-font-path}/RobotoCondensed-Regular.eot') format('embedded-opentype'),
-  url('#{$rb-font-path}/RobotoCondensed-Regular.woff') format('woff');
+  src: url('#{$font-path}/myriadprocondbold.eot');
+  src: url('#{$font-path}/myriadprocondbold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprocondbold.woff') format('woff'),
+  url('#{$font-path}/myriadprocondbold.ttf') format('truetype'),
+  url('#{$font-path}/myriadprocondbold.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  font-weight: 700;
-  font-style: normal;
-
-  src: url('#{$rb-font-path}/RobotoCondensed-Bold.eot');
-  src: local('Roboto Condensed Regular'),
-  local('RobotoCondensed-Bold'),
-  url('#{$rb-font-path}/RobotoCondensed-Bold.eot') format('embedded-opentype'),
-  url('#{$rb-font-path}/RobotoCondensed-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-weight: 300;
+  font-family: 'Myriad Pro Cond';
+  font-weight: bold;
   font-style: italic;
 
-  src: url('#{$rb-font-path}/RobotoCondensed-LightItalic.eot');
-  src: local('Roboto Condensed Light Italic'),
-  local('RobotoCondensed-LightItalic'),
-  url('#{$rb-font-path}/RobotoCondensed-LightItalic.eot') format('embedded-opentype'),
-  url('#{$rb-font-path}/RobotoCondensed-LightItalic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-weight: 400;
-  font-style: italic;
-
-  src: url('#{$rb-font-path}/RobotoCondensed-Italic.eot');
-  src: local('Roboto Condensed Italic'),
-  local('RobotoCondensed-Italic'),
-  url('#{$rb-font-path}/RobotoCondensed-Italic.eot') format('embedded-opentype'),
-  url('#{$rb-font-path}/RobotoCondensed-Italic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-weight: 700;
-  font-style: italic;
-
-  src: url('#{$rb-font-path}/RobotoCondensed-BoldItalic.eot');
-  src: local('Roboto Condensed Bold Italic'),
-  local('RobotoCondensed-BoldItalic'),
-  url('#{$rb-font-path}/RobotoCondensed-BoldItalic.eot') format('embedded-opentype'),
-  url('#{$rb-font-path}/RobotoCondensed-BoldItalic.woff') format('woff');
+  src: url('#{$font-path}/myriadprocondbolditalic.eot');
+  src: url('#{$font-path}/myriadprocondbolditalic.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/myriadprocondbolditalic.woff') format('woff'),
+  url('#{$font-path}/myriadprocondbolditalic.ttf') format('truetype'),
+  url('#{$font-path}/myriadprocondbolditalic.otf') format('otf');
 }

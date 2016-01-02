@@ -48,6 +48,10 @@ wp_deregister_script( 'jquery-form' );
 
 
     //  Load footer scripts (footer.php)
+    wp_register_script('owl', get_template_directory_uri() . '/js/owl.carousel.js', array(), '1.0.0', true); // Custom scripts
+    wp_enqueue_script('owl'); // Enqueue it!
+
+    //  Load footer scripts (footer.php)
     wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true); // Custom scripts
     wp_enqueue_script('wpeScripts'); // Enqueue it!
   }
