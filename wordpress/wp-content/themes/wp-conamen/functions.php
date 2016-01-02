@@ -565,6 +565,43 @@ function easy_breadcrumbs() {
   }
 } // end easy_breadcrumbs()
 
+/** Register Custom Post Type */
+add_action('init', 'child_register');
+function child_register() {
+
+  $labels = array(
+    'name' => _x('Child', 'post type general name'),
+    'singular_name' => _x('Child', 'post type singular name'),
+    'add_new' => _x('Add', 'child'),
+    'add_new_item' => __('Add'),
+    'edit_item' => __('Edit'),
+    'new_item' => __('Add'),
+    'view_item' => __('View'),
+    'search_items' => __('Search'),
+    'not_found' =>  __('Not found'),
+    'not_found_in_trash' => __('Not found'),
+    'parent_item_colon' => ''
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'menu_icon' => get_stylesheet_directory_uri() . '/img/ico/child.png',
+    'rewrite' => true,
+    'has_archive' => true,
+    'capability_type' => 'post',
+    'hierarchical' => true,
+    'menu_position' => null,
+    'exclude_from_search' => false,
+    'supports' => array('title','editor','thumbnail', 'custom-fields', 'comments')
+    );
+  register_post_type( 'child' , $args );
+}
+
+
 /*
   Plugin Name: Top Level Categories
   Plugin URI: http://fortes.com/projects/wordpress/top-level-cats/

@@ -187,9 +187,64 @@ footer {
   height: $footer;
   margin: $footer_margin auto 0;
 
-  background-color: $light-gray;
+  background-color: #fff;
   .inner {
     height: $footer;
+    padding-top: 50px;
+  }
+  .footer-block {
+    font-size: 15px;
+
+    float: left;
+    overflow: hidden;
+
+    width: 341px;
+    height: 180px;
+    padding: 0 60px;
+
+    text-align: center;
+
+    color: #959595;
+    border-right: 1px solid #656464;
+    a {
+      text-decoration: none;
+
+      color: #959595;
+    }
+    &.footer-block-left {
+      font-size: 19px;
+
+      padding-top: 70px;
+
+      background-image: url(../img/logo-footer.png);
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+    &.footer-block-middle {
+      padding: 0;
+      ul {
+        display: block;
+
+        width: 100%;
+        padding-top: 37px;
+
+        @extend .clearfix;
+      }
+      li {
+        float: left;
+line-height: 2;
+        width: 50%;
+
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &.footer-block-right {
+      border-right: 0;
+      height: auto;
+      line-height: 1.1;
+      padding: 0;
+    }
   }
 }
 
