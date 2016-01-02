@@ -207,6 +207,12 @@ article {
 .looper {
   @extend .clearfix;
 }
+.breadcrumbs {
+  font-size: 12px;
+
+  margin-bottom: 15px;
+  padding: 35px 90px;
+}
 .title-bordered {
   font-size: 29px;
   font-weight: bold;
@@ -228,6 +234,14 @@ article {
     background-color: #fff;
 
     @extend .dblock;
+  }
+}
+article {
+  &.type-page {
+    margin: 0 100px 50px;
+    padding: 30px 25px 40px;
+
+    border: 3px solid $blue;
   }
 }
 .article-bordered {
