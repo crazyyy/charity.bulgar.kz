@@ -188,7 +188,7 @@ nav {
 
         @extend .align-center;
       }
-      &.current_page_item,
+      &.current-menu-item,
       &:hover {
         background-color: #f9e8d7;
         a {
@@ -806,7 +806,8 @@ body {
     .title-name,
     .darovana {
       margin-bottom: 10px;
-
+height: 28px;
+overflow: hidden;
       color: #565555;
     }
   }

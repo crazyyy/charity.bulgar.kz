@@ -36,16 +36,28 @@
     <article class="article-carousel article-carousel-right">
       <h5 class="article-carousel-title">POMOC, PROSÍM!</h5>
       <div class="owl-carousel owl-carousel-fourth">
-        <?php query_posts( array( 'post_type' => child, 'showposts' => 25 ) ); ?>
-          <?php while ( have_posts() ) : the_post(); ?>
+        <?php $posts = get_posts(array(
+          'post_type' => child,
+          'showposts' => 25,
+          'meta_query' => array(
+            array(
+              'key' => 'needhelp',
+              'value' => '1',
+              'compare' => '=='
+              )
+            )
+          ));
+          if( $posts ) { foreach( $posts as $post ) { setup_postdata( $post ); ?>
+
             <div class="item">
               <?php $images = get_field('gallery'); $image_1 = $images[0]; ?>
               <img src="<?php echo $image_1[url]; ?>" alt="<?php the_title(); ?>">
               <span class="title-name"><?php the_field('name'); ?></span>
               <span class="contib"><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span>
             </div><!-- item -->
-          <?php endwhile; ?>
-        <?php wp_reset_query(); ?>
+
+          <?php } wp_reset_postdata(); } ?>
+
       </div><!-- owl-carousel-fourth -->
     </article><!-- /.article-carousel article-carousel-right -->
 
