@@ -212,6 +212,8 @@ article {
 
   margin-bottom: 15px;
   padding: 35px 90px;
+
+  text-transform: uppercase;
 }
 .title-bordered {
   font-size: 29px;
@@ -242,6 +244,38 @@ article {
     padding: 30px 25px 40px;
 
     border: 3px solid $blue;
+  }
+  blockquote {
+    display: block;
+
+    margin: 0 0 30px;
+    padding: 0 0 0 18px;
+
+    border-left: 1px solid #656464;
+  }
+}
+body {
+  &.single-child {
+    article {
+      padding: 0 115px 60px;
+    }
+    .article-slide-right {
+      float: right;
+
+      width: 310px;
+      height: 300px;
+      margin-bottom: 30px;
+      margin-left: 30px;
+    }
+    .title-red,
+    .title-subtitle {
+      float: left;
+
+      width: 450px;
+      span {
+        color: $red;
+      }
+    }
   }
 }
 .article-bordered {
@@ -822,7 +856,53 @@ article {
     }
   }
 }
+.article-loop-slide {
+  background-color: transparent;
+  .inner {
+    position: relative;
 
+    padding-top: 0;
+    .article-slide-bottom {
+      float: left;
+
+      width: 100%;
+      height: 0;
+      padding-top: 25px;
+
+      border-bottom: 1px dotted $blue;
+    }
+    &:last-child {
+      .article-slide-bottom {
+        display: none;
+      }
+    }
+    .title-subtitle {
+      span {
+        color: $red;
+      }
+    }
+  }
+}
+.pagination {
+  padding: 25px 0;
+
+  text-align: center;
+  span,
+  a {
+    font-size: 12px;
+
+    display: inline-block;
+
+    padding: 3px 7px;
+
+    color: #fff;
+    border-radius: 3px;
+    background-color: $blue;
+    &.current {
+      background-color: $red;
+    }
+  }
+}
 
 
 

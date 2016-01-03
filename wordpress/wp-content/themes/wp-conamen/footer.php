@@ -47,8 +47,7 @@ $(document).ready(function() {
     pagination: false,
     paginationSpeed : 400,
     singleItem : true,
-    autoPlay : 3000,
-    stopOnHover : true,
+
     paginationSpeed : 1000,
     goToFirstSpeed : 2000,
     autoHeight : true,
