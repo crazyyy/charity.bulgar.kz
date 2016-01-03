@@ -9,7 +9,7 @@
       <span class="phone">tel. <a href="tel:+420776260478">+420 776 260 478</a></span>
       <a href="mailto:charita@conamen.cz" class="mail">charita@conamen.cz</a>
       <p class="copyright">
-        &copy; <?php echo date("Y"); ?> Собственность <?php bloginfo('name'); ?>.
+        &copy; 2011 - <?php echo date("Y"); ?> Spolek Conamen<br>Pomoc hendikepovaným dětem
       </p><!-- /copyright -->
     </div><!-- /.footer-block footer-block-left -->
 

@@ -20,7 +20,7 @@
 $(document).ready(function() {
   $(".owl-carousel-single").owlCarousel({
     navigation: true,
-    navigationText: ["<",">"],
+    navigationText: [" "," "],
     slideSpeed: 300,
     pagination: false,
     paginationSpeed : 400,
@@ -35,7 +35,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(".owl-carousel-parners").owlCarousel({
     navigation: true,
-    navigationText: ["<",">"],
+    navigationText: [" "," "],
     slideSpeed: 300,
     pagination: false,
     paginationSpeed : 400,
@@ -52,7 +52,7 @@ $(document).ready(function() {
   $(".owl-carousel-fourth").owlCarousel({
     items : 4,
     navigation: true,
-    navigationText: ["<",">"],
+    navigationText: [" "," "],
     slideSpeed: 300,
     pagination: false,
     paginationSpeed : 400,

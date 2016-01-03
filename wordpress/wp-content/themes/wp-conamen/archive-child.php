@@ -8,7 +8,7 @@
           <h2 class="title-red"><?php the_title(); ?></h2>
           <h3 class="title-subtitle">POMOC PRO <?php the_field('name'); ?> <span><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span></h3>
           <?php the_field('description'); ?>
-          <a href="" class="btn btn-blue">ČIST DALŠÍ</a>
+          <a href="<?php the_permalink(); ?>" class="btn btn-blue">ČIST DALŠÍ</a>
           <a href="" class="btn btn-red">PŘÍBĚH DÍTĚTE</a>
         </div><!-- /.article-slide-left -->
         <div class="article-slide-right">
