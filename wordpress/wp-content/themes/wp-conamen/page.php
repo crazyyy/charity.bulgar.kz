@@ -12,10 +12,4 @@
       <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
     </article>
   <?php endif; ?>
-
-  </div><!-- /.inner -->
-
-  <?php include(TEMPLATEPATH.'/includes/middle-row.php'); ?>
-
-  <div class="inner">
 <?php get_footer(); ?>

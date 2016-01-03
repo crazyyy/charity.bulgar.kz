@@ -17,3 +17,49 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+$(document).ready(function() {
+  $(".owl-carousel-single").owlCarousel({
+    navigation: true,
+    navigationText: ["<",">"],
+    slideSpeed: 300,
+    pagination: false,
+    paginationSpeed : 400,
+    singleItem : true,
+
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    autoHeight : true,
+    transitionStyle:"fade"
+  });
+});
+$(document).ready(function() {
+  $(".owl-carousel-parners").owlCarousel({
+    navigation: true,
+    navigationText: ["<",">"],
+    slideSpeed: 300,
+    pagination: false,
+    paginationSpeed : 400,
+    singleItem : true,
+    autoPlay : 3000,
+    stopOnHover : true,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+
+    transitionStyle:"fade"
+  });
+});
+$(document).ready(function() {
+  $(".owl-carousel-fourth").owlCarousel({
+    items : 4,
+    navigation: true,
+    navigationText: ["<",">"],
+    slideSpeed: 300,
+    pagination: false,
+    paginationSpeed : 400,
+    autoPlay : 3000,
+    stopOnHover : true,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    transitionStyle:"fade"
+  });
+});
