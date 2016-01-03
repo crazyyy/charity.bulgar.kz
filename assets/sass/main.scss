@@ -203,6 +203,23 @@ article {
   position: relative;
 
   @extend .clearfix;
+  .looper {
+    margin-bottom: 20px;
+    .inner-title {
+      font-size: 12px;
+      font-weight: normal;
+
+      text-transform: uppercase;
+      span {
+        font-weight: bold;
+      }
+    }
+    p {
+      padding-left: 15px;
+
+      border-left: 1px solid #656464;
+    }
+  }
 }
 .looper {
   @extend .clearfix;
@@ -249,12 +266,26 @@ article {
   }
 }
 body {
+  &.single-post,
   &.page-template {
     article {
+      &.type-post,
       &.type-page {
         margin: 0 100px 50px;
         padding: 30px 25px 40px;
       }
+      .inner-title {
+        font-size: 28px;
+        font-weight: bold;
+
+        color: $red;
+      }
+    }
+  }
+  &.category {
+    article {
+      margin: 0 100px 50px;
+      padding: 30px 25px 40px;
     }
   }
   &.page-template-page-bordered-center,

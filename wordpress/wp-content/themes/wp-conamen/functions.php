@@ -207,6 +207,9 @@ function wpeExcerpt20($length) {
 function wpeExcerpt40($length) {
   return 40;
 }
+function wpeExcerpt150($length) {
+  return 150;
+}
 //  Create the Custom Excerpts callback
 //  RU: Собственная обрезка контента
 function wpeExcerpt($length_callback = '', $more_callback = '') {
