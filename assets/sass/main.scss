@@ -312,6 +312,56 @@ body {
       }
     }
   }
+  &.parent-pageid-26 {
+    .title-bordered {
+      display: none;
+    }
+  }
+  &.page-id-103 {
+    .howtohelp {
+      li {
+        &:before {
+          background-image: url(../img/bg/howtohelp-1.png);
+        }
+      }
+    }
+  }
+  &.page-id-109 {
+    .howtohelp {
+      li {
+        &:before {
+          background-image: url(../img/bg/howtohelp-2.png);
+        }
+      }
+    }
+  }
+  &.page-id-112 {
+    .howtohelp {
+      li {
+        &:before {
+          background-image: url(../img/bg/howtohelp-3.png);
+        }
+      }
+    }
+  }
+  &.page-id-114 {
+    .howtohelp {
+      li {
+        &:before {
+          background-image: url(../img/bg/howtohelp-4.png);
+        }
+      }
+    }
+  }
+  &.page-id-116 {
+    .howtohelp {
+      li {
+        &:before {
+          background-image: url(../img/bg/howtohelp-5.png);
+        }
+      }
+    }
+  }
 }
 .article-bordered {
   font-size: 12px;
@@ -383,6 +433,7 @@ body {
 
   color: $red;
 }
+
 .title-subtitle {
   font-family: 'Myriad Pro Cond';
   font-size: 24px;

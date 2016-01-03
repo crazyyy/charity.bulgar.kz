@@ -57,31 +57,31 @@
           <h5>Zasláním finančního daru na konkrétní dítě</h5>
           <p>V sekci "komu pomáháme" si můžete přečíst příběhy všech dětí, které podporujeme. Každé dítě má přidělen svůj variabilní symbol, pod tímto symbolem můžete přispět libovolnou částkou na konkrétní dítě. Můžete také poslat finanční dar bez uvedení variabilního symbolu, tento příspěvek bude rozdělen  mezi děti, které v součastné době podporujeme.</p>
           <p>Transparentní účet Č.ú. veřejné sbírky 2223 2224/5500</p>
-          <a href="">DALŠÍ</a>
+          <a href="<?php echo home_url(); ?>/jak-muzete-pomoci/zaslanim-financniho-daru-na-konkretni-dite.htm">DALŠÍ</a>
         </li>
         <li>
           <h5>Koupí benefičního předmětu</h5>
           <p>Ve vašem městě můžete potkat prodejce s benefičními předměty Conamen o.s., tyto prodejci mají vždy na sobě oblečení Conamen o.s. a benefiční předměty jsou označené našim logem a webovými stránkami. Koupí předmětu přispějete též na veřejnou sbírku.</p>
-          <a href="">DALŠÍ</a>
+          <a href="<?php echo home_url(); ?>/jak-muzete-pomoci/koupi-beneficniho-predmetu.htm">DALŠÍ</a>
         </li>
         <li>
           <h5>Mužete poslát SMS</h5>
           <p>Ve vašem městě můžete potkat prodejce s benefičními předměty Conamen o.s., tyto prodejci mají vždy na sobě oblečení Conamen o.s. a benefiční předměty jsou označené našim logem a webovými stránkami. Koupí předmětu přispějete též na veřejnou sbírku.</p>
           <p>Telefon je 877 637 777</p>
-          <a href="">DALŠÍ</a>
+          <a href="<?php echo home_url(); ?>/jak-muzete-pomoci/muzete-poslat-sms.htm">DALŠÍ</a>
         </li>
         <li>
           <h5>Můžete dát do své internet stranky náš banner</h5>
           <p>Darováním zdravotnické či kompenzační pomůcky, které je cílem veřejné sbírky a tak pomoci přímo dítěti. Darováním kancelářských potřeb (papír, psací potřeby atd.) <br>
           Poskytnutí služby – např. tisku plakátů či výroby propagačních materiálů, darováním poukazu na pohonné hmoty apod. V případě, že se rozhodnete takto pomoci, prosím kontaktujte nás info@conamen.cz
           <br>Děkujeme.</p>
-          <a href="">DALŠÍ</a>
+          <a href="<?php echo home_url(); ?>/jak-muzete-pomoci/muzete-dat-do-sve-internet-stranky-nas-banner.htm">DALŠÍ</a>
         </li>
         <li>
           <h5>Můžete též pomoci hmotnou věcí či poskytnutím služby</h5>
           <p>Darováním zdravotnické či kompenzační pomůcky, které je cílem veřejné sbírky a tak pomoci přímo dítěti. Darováním kancelářských potřeb (papír, psací potřeby atd.) <br>
           Poskytnutí služby – např. tisku plakátů či výroby propagačních materiálů, darováním poukazu na pohonné hmoty apod. V případě, že se rozhodnete takto pomoci, prosím kontaktujte nás info@conamen.cz Děkujeme.</p>
-          <a href="">DALŠÍ</a>
+          <a href="<?php echo home_url(); ?>/jak-muzete-pomoci/muzete-dat-do-sve-internet-stranky-nas-banner.htm">DALŠÍ</a>
         </li>
       </ul>
     </article><!-- /.article-bordered article-bordered-centered -->
