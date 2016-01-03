@@ -8,7 +8,6 @@
     <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
     <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
-    <!-- meta -->
 
     <!-- icons -->
     <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">

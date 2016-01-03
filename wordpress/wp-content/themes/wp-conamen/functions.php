@@ -44,11 +44,10 @@ function wpeHeaderScripts() {
     wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3'); // Modernizr
     wp_enqueue_script('modernizr'); // Enqueue it!
 
-wp_deregister_script( 'jquery-form' );
-
+    wp_deregister_script( 'jquery-form' );
 
     //  Load footer scripts (footer.php)
-    wp_register_script('owl', get_template_directory_uri() . '/js/owl.carousel.js', array(), '1.0.0', true); // Custom scripts
+    wp_register_script('owl', get_template_directory_uri() . '/js/owl.carousel.js', array(), '1.3.3', true); // Custom scripts
     wp_enqueue_script('owl'); // Enqueue it!
 
     //  Load footer scripts (footer.php)
@@ -166,16 +165,16 @@ function wpeSideNav() {
 //  Register WPE Navigation
 function register_html5_menu() {
   register_nav_menus(array(
-    'header-menu' => __('Меню в шапке', 'wpeasy'),
-    'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
-    'footer-menu' => __('Меню в подвал', 'wpeasy')
+    'header-menu' => __('Header nav', 'wpeasy'),
+    'sidebar-menu' => __('Sidebar nav', 'wpeasy'),
+    'footer-menu' => __('Footer nav', 'wpeasy')
   ));
 }
 //  If Dynamic Sidebar Existsов
 if (function_exists('register_sidebar')) {
   //  Define Sidebar Widget Area 1
   register_sidebar(array(
-    'name' => __('Блок виджетов #1', 'wpeasy'),
+    'name' => __('Widget block #1', 'wpeasy'),
     'description' => __('Description for this widget-area...', 'wpeasy'),
     'id' => 'widgetarea1',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
