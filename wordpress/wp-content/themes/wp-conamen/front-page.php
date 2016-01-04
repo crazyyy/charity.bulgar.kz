@@ -15,7 +15,7 @@
             <h2 class="title-red"><?php the_title(); ?></h2>
             <h3 class="title-subtitle">POMOC PRO <?php the_field('name'); ?> <span><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span></h3>
             <?php the_field('description'); ?>
-            <a href="" class="btn btn-blue">ČIST DALŠÍ</a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-blue">ČIST DALŠÍ</a>
             <a href="" class="btn btn-red">PŘÍBĚH DÍTĚTE</a>
           </div><!-- /.article-slide-left -->
           <div class="article-slide-right">
@@ -36,28 +36,16 @@
     <article class="article-carousel article-carousel-right">
       <h5 class="article-carousel-title">POMOC, PROSÍM!</h5>
       <div class="owl-carousel owl-carousel-fourth">
-        <?php $posts = get_posts(array(
-          'post_type' => child,
-          'showposts' => 25,
-          'meta_query' => array(
-            array(
-              'key' => 'needhelp',
-              'value' => '1',
-              'compare' => '=='
-              )
-            )
-          ));
-          if( $posts ) { foreach( $posts as $post ) { setup_postdata( $post ); ?>
-
+        <?php query_posts( array( 'post_type' => child, 'showposts' => 25, 'meta_query' => array( array( 'key' => 'needhelp', 'value' => '1', 'compare' => '==' )))); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
             <div class="item">
               <?php $images = get_field('gallery'); $image_1 = $images[0]; ?>
               <img src="<?php echo $image_1[url]; ?>" alt="<?php the_title(); ?>">
               <span class="title-name"><?php the_field('name'); ?></span>
               <span class="contib"><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span>
             </div><!-- item -->
-
-          <?php } wp_reset_postdata(); } ?>
-
+          <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
       </div><!-- owl-carousel-fourth -->
     </article><!-- /.article-carousel article-carousel-right -->
 
@@ -104,7 +92,7 @@
     <div class="inner">
       <h5 class="article-carousel-title">KOMU JSME POMOHLI?</h5>
       <div class="owl-carousel owl-carousel-fourth owl-carousel-blue">
-        <?php query_posts( array( 'post_type' => child, 'showposts' => 25 ) ); ?>
+        <?php query_posts( array( 'post_type' => child, 'showposts' => 25, 'meta_query' => array( array( 'key' => 'needhelp', 'value' => '0', 'compare' => '==' )))); ?>
           <?php while ( have_posts() ) : the_post(); ?>
             <div class="item">
               <span class="title-name"><?php the_field('name'); ?></span>

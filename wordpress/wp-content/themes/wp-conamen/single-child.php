@@ -12,9 +12,20 @@
         </div>
       </div><!-- /.article-slide-right -->
       <h2 class="title-red"><?php the_title(); ?></h2>
-      <h3 class="title-subtitle">POMOC PRO <?php the_field('name'); ?> <span><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?>,-</span></h3>
+      <?php
+      if( get_field('needhelp') ) {
+        $title_text = 'POMOC PRO ';
+        $aftermoney = ',-';
+      } else {
+        $title_text = 'SOBRALI JSME PRO ';
+        $aftermoney = ' KČ';
+      }?>
+      <h3 class="title-subtitle"><?php echo $title_text; ?><?php the_field('name'); ?> <span><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?><?php echo $aftermoney; ?></span></h3>
       <?php the_content(); ?>
-      <a href="" class="btn btn-red">POMOCI DÍTĚTE</a>
+      <?php if( get_field('needhelp') ) { ?>
+        <a href="" class="btn btn-red">POMOCI DÍTĚTE</a>
+      <?php } ?>
+
     </article>
   <?php endwhile; else: ?>
     <article>
