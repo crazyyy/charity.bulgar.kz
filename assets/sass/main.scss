@@ -628,6 +628,17 @@ body {
     span {
       display: block;
     }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      img {
+        border-color: darken($red, 10%);
+      }
+    }
   }
   .owl-theme {
     .owl-controls {
@@ -800,15 +811,25 @@ body {
     height: 280px;
 
     text-align: center;
+    a {
+      text-decoration: none;
+    }
     img {
       border-color: $blue;
     }
     .title-name,
     .darovana {
+      overflow: hidden;
+
+      height: 28px;
       margin-bottom: 10px;
-height: 28px;
-overflow: hidden;
+
       color: #565555;
+    }
+    &:hover {
+      img {
+        border-color: darken($blue, 10%);
+      }
     }
   }
 }
@@ -1048,16 +1069,16 @@ overflow: hidden;
 
     border: 0;
     &:nth-child(1) {
-      width: 70px;
+      width: 200px;
       padding: 0 0 15px;
       img {
         width: 100%;
       }
     }
     &:nth-child(2) {
-      font-size: 12px;
+      font-size: 20px;
 
-      padding: 15px;
+      padding: 0 15px;
 
       color: #2c2a2a;
       a {
