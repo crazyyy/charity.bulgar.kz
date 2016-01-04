@@ -23,7 +23,7 @@
       <h3 class="title-subtitle"><?php echo $title_text; ?><?php the_field('name'); ?> <span><?php if( have_rows('donations') ): $sum = 0; while ( have_rows('donations') ) : the_row(); $number = get_sub_field('сontributions'); $sum += $number; endwhile; echo $sum; else : echo '0'; endif; ?><?php echo $aftermoney; ?></span></h3>
       <?php the_content(); ?>
       <?php if( get_field('needhelp') ) { ?>
-        <a href="" class="btn btn-red">POMOCI DÍTĚTE</a>
+        <?php if(get_field('link')) { ?><a href="<?php the_field('link'); ?>" class="btn btn-red">PŘÍBĚH DÍTĚTE</a><?php } ?>
       <?php } ?>
 
     </article>
