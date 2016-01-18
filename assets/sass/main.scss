@@ -22,6 +22,8 @@ body {
   font-weight: $f-norm;
   line-height: $base-line-height;
 
+  min-width: $width;
+
   color: $base-font-color;
   background-color: $base-background-color;
 
@@ -399,6 +401,14 @@ body {
           background-image: url(../img/bg/howtohelp-5.png);
         }
       }
+    }
+  }
+  &.page-id-92 {
+    .our-parners-slider {
+      margin-top: 25px;
+    }
+    .our-parners-logos {
+      margin-bottom: 25px;
     }
   }
 }
